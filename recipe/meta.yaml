@@ -28,6 +28,7 @@ requirements:
     - httpx
     - rich
     - trio
+    - dulwich
 
 test:
   imports:
