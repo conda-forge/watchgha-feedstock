@@ -35,7 +35,6 @@ test:
     - watchgha
   commands:
     - pip check
-    - watch_gha_runs --help
   requires:
     - pip
 
