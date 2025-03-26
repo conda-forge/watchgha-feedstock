@@ -1,5 +1,5 @@
 {% set name = "watchgha" %}
-{% set version = "2.3.2" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/watchgha-{{ version }}.tar.gz
-  sha256: 1b513675982d4f8ae06d05271a25225a845b9ded414081a8d6b18d6ea7aaeeef
+  sha256: 744c5dab63565c342ca2760fe763673b9e35e51addc912d0c6c5c64dba1cc724
 
 build:
   entry_points:
     - watch_gha_runs = watchgha.watch_runs:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
