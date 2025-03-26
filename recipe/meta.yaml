@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/watchgha-{{ version }}.tar.gz
   sha256: 744c5dab63565c342ca2760fe763673b9e35e51addc912d0c6c5c64dba1cc724
+  patches:
+    - pyproject.patch
 
 build:
   entry_points:
