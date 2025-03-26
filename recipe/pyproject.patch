@@ -1,0 +1,22 @@
+From 892295f07c472d0c085798f30c8675cd31cd9fdc Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Wed, 26 Mar 2025 07:47:48 +0100
+Subject: [PATCH] Update pyproject.toml
+
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index 706b74a..20bca2c 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -8,7 +8,7 @@ authors = [
+     {name = "Ned Batchelder", email = "ned@nedbatchelder.com"},
+ ]
+ 
+-license = "Apache-2.0"
++license.text = "Apache-2.0"
+ 
+ classifiers = [
+     "Development Status :: 5 - Production/Stable",
