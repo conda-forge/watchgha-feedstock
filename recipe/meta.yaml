@@ -1,5 +1,5 @@
 {% set name = "watchgha" %}
-{% set version = "2.5.0" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/watchgha-{{ version }}.tar.gz
-  sha256: 8e3424fd7f6477caa1aa0be2bd222cbe0d013a9eb387acaaa4f8804ba6a4fcfb
+  sha256: 0fc02cc9dd811a33d85ab02a9d744330a81954a0b97aecc175b830e848840b82
   patches:
     - pyproject.patch
 
