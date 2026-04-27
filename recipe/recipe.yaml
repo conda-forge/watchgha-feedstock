@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: watchgha
+  version: "2.7.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/watchgha-${{ version }}.tar.gz
+  sha256: 11693f8797aeb23828c23e82ea1f11800c6482a8eee0d8b703fc1669e0d0dc64
+  patches:
+    - pyproject.patch
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+  python:
+    entry_points:
+      - watch_gha_runs = watchgha.watch_runs:main
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - setuptools
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - click
+    - exceptiongroup
+    - httpx
+    - rich
+    - trio
+    - dulwich
+
+tests:
+  - python:
+      imports:
+        - watchgha
+      pip_check: true
+      python_version: ${{ python_min }}
+
+about:
+  summary: Watch GitHub action runs
+  license: Apache-2.0
+  license_file: LICENSE.txt
+  homepage: https://github.com/nedbat/watchgha
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
